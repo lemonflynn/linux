@@ -146,6 +146,11 @@ if grep -q "^CONFIG_OF=y" $KCONFIG_CONFIG ; then
 	fi
 fi
 
+# If dtbs have been built for this arch, include them in the package
+if [ -d "arch/$ARCH/boot/dts" ]; then
+  find "arch/$ARCH/boot/dts" -iname '*.dtb' -exec sh -c "mkdir -p '$tmpdir/usr/lib/$packagename'; cp '{}' '$tmpdir/usr/lib/$packagename/'" \;
+fi
+
 if grep -q '^CONFIG_MODULES=y' $KCONFIG_CONFIG ; then
 	INSTALL_MOD_PATH="$tmpdir" $MAKE KBUILD_SRC= modules_install
 	rm -f "$tmpdir/lib/modules/$version/build"
