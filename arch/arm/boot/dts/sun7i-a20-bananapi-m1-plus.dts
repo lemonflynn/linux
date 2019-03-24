@@ -62,9 +62,9 @@
 		#size-cells = <1>;
 		ranges;
 
-		inmate_reserved: inmate@0x78000000{
+		inmate_reserved: inmate@0x60000000{
 			no-map;
-			reg = <0x78000000 0x3ef0000>;
+			reg = <0x60000000 0x1bef0000>;
 		};
 	};
 
