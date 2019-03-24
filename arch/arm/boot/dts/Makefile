@@ -621,6 +621,7 @@ dtb-$(CONFIG_MACH_SUN7I) += \
 	sun7i-a20-orangepi.dtb \
 	sun7i-a20-orangepi-mini.dtb \
     sun7i-a20-bananapi-m1-plus.dtb \
+    sun7i-a20-bananapi-m1-plus-inmate.dtb \
 	sun7i-a20-pcduino3.dtb \
 	sun7i-a20-pcduino3-nano.dtb \
 	sun7i-a20-wexler-tab7200.dtb

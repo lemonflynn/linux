@@ -51,21 +51,7 @@
 	compatible = "sinovoip,bpi-m1-plus", "allwinner,sun7i-a20";
 
 	aliases {
-		serial0 = &uart0;
-		serial1 = &uart2;
-		serial2 = &uart3;
-		serial3 = &uart7;
-	};
-
-	reserved-memory {
-		#address-cells = <1>;
-		#size-cells = <1>;
-		ranges;
-
-		inmate_reserved: inmate@0x78000000{
-			no-map;
-			reg = <0x78000000 0x3ef0000>;
-		};
+		serial0 = &uart7;
 	};
 
 	chosen {
